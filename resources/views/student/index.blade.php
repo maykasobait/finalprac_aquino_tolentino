@@ -65,7 +65,7 @@
                         <!-- /.card-body -->
 
                     </div>
- <a href="{{ route('student.create') }}" class="btn btn-success btn-sm">ADD STUDENT</a>
+ <a href="{{ route('student.create') }}" class="btn btn-success btn-sm">ADD EMPLOYEE</a>
                 </div>
             </div>
             <!-- /.row -->
