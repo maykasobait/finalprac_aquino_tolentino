@@ -44,9 +44,18 @@
                                         <td>{{ $student->mname }}</td>
                                         <td>{{ $student->add }}</td>
                                         <td>{{ $student->dob }}</td>
-                                        < </form>
-                                            </td>
-                                    </tr>
+
+    <td> <a href="{{ route('student.edit', $student->id) }}" class="btn btn-success btn-sm">Edit</a>
+<form action="{{ route('student.destroy', $student->id) }}" method="POST" class="d-inline">
+                                        @csrf
+
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Delete this Student?')">
+                                            Delete
+                                        </button>
+                                    </form></td>
+        </tr>
+
                                 @endforeach
                                 </tbody>
 
@@ -54,8 +63,9 @@
                             </table>
                         </div>
                         <!-- /.card-body -->
-                    </div>
 
+                    </div>
+ <a href="{{ route('student.create') }}" class="btn btn-success btn-sm">ADD STUDENT</a>
                 </div>
             </div>
             <!-- /.row -->
